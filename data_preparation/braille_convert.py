@@ -131,7 +131,7 @@ def process_file(file_path):
         output_file_path = os.path.join(output_file_path)
 
         if download_response.status_code == 200:
-            with open(output_file_path, "w") as f:
+            with open(output_file_path, "wb") as f:
                 f.write(download_response.content)
             print("Braille file downloaded successfully.")
         else:
